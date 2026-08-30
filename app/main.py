@@ -1,8 +1,13 @@
 from fastapi import FastAPI
 
+from app.core.database import Base, engine
+from app.models import User, Scan, Clause, RevokedToken
 from app.ml.model import model
 from app.routers.auth import router as auth_router
 from app.routers.scans import router as scans_router
+
+
+Base.metadata.create_all(bind=engine)
 
 
 app = FastAPI(
