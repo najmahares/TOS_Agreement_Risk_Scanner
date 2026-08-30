@@ -19,3 +19,24 @@ __pycache__/
 notebooks/models/agreement_risk_scanner.broken.joblib
 notebooks/models/agreement_risk_scanner.joblib
 notebooks/models/agreement_risk_scanner_fixed.joblib
+
+.env.local
+.env*.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.env.local
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+
+# OS
+.DS_Storefrontend/
