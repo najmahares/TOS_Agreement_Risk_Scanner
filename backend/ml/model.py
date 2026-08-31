@@ -6,10 +6,9 @@ import joblib
 from backend.ml.preprocessing import preprocess_text
 
 
-# Project root
-BASE_DIR = Path(__file__).resolve().parents[2]
 
-# Original model trained and validated in the notebook
+BASE_DIR = Path(__file__).resolve().parents[1]
+
 MODEL_PATH = (
     BASE_DIR
     / "notebooks"
@@ -26,8 +25,7 @@ LABEL_MAPPING = {
 }
 
 
-# The notebook serialized preprocess_text as __main__.preprocess_text.
-# Make the application version available during deserialization.
+
 sys.modules["__main__"].preprocess_text = preprocess_text
 
 
